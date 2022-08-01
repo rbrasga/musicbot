@@ -49,3 +49,6 @@ If you have python and the packages you are good to go. Load up New World on you
     Press the enter key
 
     Type python main.py, press enter and that is it!
+    
+    
+to start running the bot go in the instument menu (f5) select song and click on ready. once in the performance screen the boot will take over and play some beautifull music
