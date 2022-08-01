@@ -23,12 +23,12 @@ Prereqs
 
     Copy and past the commands below into your terminal. This will install the Open Source packages needed to run the program.
 
-pip install PyAutoGUI
-pip install PyDirectInput
-pip install Pillow
-pip install opencv-python
-pip install mss
-pip install numpy
+    pip install PyAutoGUI
+    pip install PyDirectInput
+    pip install Pillow
+    pip install opencv-python
+    pip install mss
+    pip install numpy
 
 IF YOU GET THE FOLLOWING ERROR python is not recognized as an internal or external command, operable program, or batch file Watch This: https://youtu.be/E2HvWhhAW0g
 
