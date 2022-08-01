@@ -37,8 +37,11 @@ def main():
     mssRegion = {"mon": 1, "top": (600), "left": (1065), "width": (250), "height": (50)}
 
      # Selecting the Note Area
-    mssRegionNote = {"mon": 1, "top": (760), "left": (530), "width": (140), "height": (200)}
+    mssRegionNote = {"mon": 1, "top": (760), "left": (550), "width": (110), "height": (200)}
     
+    # Selecting the Skip button
+    mssRegionSkip = {"mon": 1, "top": (440), "left": (820), "width": (50), "height": (50)}
+
     # Starting screenshotting object
     sct = mss.mss()
 
@@ -50,6 +53,9 @@ def main():
         sctImgNote = sct.grab(mssRegionNote)
         sctImgNote = np.array(sctImgNote)
 
+        sctImgSkip = sct.grab(mssRegionSkip)
+        sctImgSkip = np.array(sctImgSkip)
+
         # Looking for the Start
         if pyautogui.locate("imgs/Start.png", sctImg, grayscale=True, confidence=.35):
         
@@ -58,7 +64,18 @@ def main():
             pyautogui.keyUp('E')            
             print("Starting Song...")
             time.sleep(1.5)
+                # Looking for the Start
+
+
+
+        if pyautogui.locate("imgs/E.png", sctImgSkip, grayscale=True, confidence=.7):
         
+            # Skipping timer
+            pyautogui.keyDown('E')
+            time.sleep(5)
+            pyautogui.keyUp('E')            
+            print("Skipping timer...")
+
 
 
         # Looking for the A
@@ -121,7 +138,7 @@ def main():
 
 
         # Stuff to check and make visuals work + garbage cleaner
-        #cv2.imshow("visuals", sctImgNote)
+        #cv2.imshow("visuals", sctImgSkip)
         if cv2.waitKey(1) and 0xFF == ord('q'):
     
             gc.collect()
