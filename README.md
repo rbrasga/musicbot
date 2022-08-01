@@ -15,13 +15,13 @@ Known Features
 
 Prereqs
 
-    Unzip the file and place the folder somewhere easy to access
+1 Unzip the file and place the folder somewhere easy to access
 
-    Make sure you have a pet Python (aka install python) - https://youtu.be/N7r8_HVqqy8
+2 Make sure you have a pet Python (aka install python) - https://youtu.be/N7r8_HVqqy8
 
-    (Windows Users) Open up either PowerShell or Command Promt. This can be done by pressing the Windows Key and searching for one of those applicaitons.
+3 (Windows Users) Open up either PowerShell or Command Promt. This can be done by pressing the Windows Key and searching for one of those applicaitons.
 
-    Copy and past the commands below into your terminal. This will install the Open Source packages needed to run the program.
+4 Copy and past the commands below into your terminal. This will install the Open Source packages needed to run the program.
 
     pip install PyAutoGUI
     pip install PyDirectInput
