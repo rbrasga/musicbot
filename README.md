@@ -52,3 +52,6 @@ If you have python and the packages you are good to go. Load up New World on you
     
     
 to start running the bot go in the instument menu (f5) select song and click on ready. once in the performance screen the boot will take over and play some beautifull music
+
+For the bot to work perfectly, you must put the exact directory of "imgs", for example, "C:/desktop/bot/imgs/Start.png" <- THE MOST IMPORTANT PART !
+
