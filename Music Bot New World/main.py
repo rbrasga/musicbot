@@ -10,8 +10,10 @@ import gc
 pyautogui.FAILSAFE = False
 
 def click():
-        pyautogui.click(button='left')
-        pyautogui.click(button='right')
+        pyautogui.PAUSE=0.01 #Im using this to make loop faster
+        pyautogui.mouseDown(button='left');pyautogui.mouseDown(button='right')
+        time.sleep(0.05) 
+        pyautogui.mouseUp(button='left');pyautogui.mouseUp(button='right')
 
 def main():
 
@@ -58,28 +60,28 @@ def main():
 
 
         # Looking for the Start
-        if pyautogui.locate("imgs/Start.png", sctImg, grayscale=True, confidence=.6):
+        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/Start.png", sctImg, grayscale=True, confidence=.6):
         
             # Starting Song
             pyautogui.keyDown('E')
             pyautogui.keyUp('E')            
             print("Starting Song...")
-            time.sleep(1.5)
+            time.sleep(0.05)
 
 
         # Looking for the E
-        if pyautogui.locate("imgs/E.png", sctImgSkip, grayscale=True, confidence=.75):
+        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/E.png", sctImgSkip, grayscale=True, confidence=.75):
         
             # Skipping timer
             pyautogui.keyDown('E')
-            time.sleep(3)
+            time.sleep(0.05)
             pyautogui.keyUp('E')            
             print("Skipping timer...")
 
 
 
         # Looking for the A
-        if pyautogui.locate("imgs/A-cut.png", sctImgNote, grayscale=True, confidence=.65):
+        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/A-cut.png", sctImgNote, grayscale=True, confidence=.65):
 
             # Pressing Note A
             pyautogui.keyDown('A')
@@ -89,7 +91,7 @@ def main():
 
 
         # Looking for the S
-        if pyautogui.locate("imgs/S-cut.png", sctImgNote, grayscale=True, confidence=.65):
+        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/S-cut.png", sctImgNote, grayscale=True, confidence=.65):
 
             # Pressing Note S
             pyautogui.keyDown('S')
@@ -99,7 +101,7 @@ def main():
 
 
         # Looking for the D
-        if pyautogui.locate("imgs/D-cut.png", sctImgNote, grayscale=True, confidence=.65):
+        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/D-cut.png", sctImgNote, grayscale=True, confidence=.65):
 
             # Pressing Note D
             pyautogui.keyDown('D')
@@ -109,7 +111,7 @@ def main():
 
 
         # Looking for the W
-        if pyautogui.locate("imgs/W-cut.png", sctImgNote, grayscale=True, confidence=.65):
+        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/W-cut.png", sctImgNote, grayscale=True, confidence=.65):
 
             # Pressing Note W
             pyautogui.keyDown('W')
@@ -119,7 +121,7 @@ def main():
 
 
         # Looking for the MouseClicks
-        if pyautogui.locate("imgs/Mouse-slim.png", sctImgNote, grayscale=True, confidence=.5):
+        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/Mouse-slim.png", sctImgNote, grayscale=True, confidence=.5):
 
             # Pressing Note MouseClicks
             click()
@@ -128,7 +130,7 @@ def main():
 
 
         # Looking for the Space
-        if pyautogui.locate("imgs/Space-Blank.png", sctImgNote, grayscale=True, confidence=.65):
+        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/Space-Blank.png", sctImgNote, grayscale=True, confidence=.65):
 
             #Pressing Space
             pyautogui.keyDown('space')
