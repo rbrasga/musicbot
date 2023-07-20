@@ -38,13 +38,13 @@ def main():
     newWorldWindow.activate()
 
     # Selecting the Start Area
-    mssRegion = {"mon": 1, "top": (600), "left": (1065), "width": (250), "height": (50)}
+    mssRegion = {"mon": 1, "top": (820), "left": (1430), "width": (250), "height": (50)}
 
      # Selecting the Note Area
-    mssRegionNote = {"mon": 1, "top": (760), "left": (550), "width": (115), "height": (200)}
+    mssRegionNote = {"mon": 1, "top": (1050), "left": (770), "width": (90), "height": (200)}
     
     # Selecting the Skip button
-    mssRegionSkip = {"mon": 1, "top": (440), "left": (820), "width": (50), "height": (50)}
+    mssRegionSkip = {"mon": 1, "top": (820), "left": (1430), "width": (75), "height": (75)}
 
     # Starting screenshotting object
     sct = mss.mss()
@@ -61,9 +61,10 @@ def main():
         sctImgSkip = sct.grab(mssRegionSkip)
         sctImgSkip = np.array(sctImgSkip)
 
+        '''
 
         # Looking for the Start
-        if pyautogui.locate("imgs/Start.png", sctImg, grayscale=True, confidence=.6):
+        elif pyautogui.locate("imgs/Start.png", sctImg, grayscale=True, confidence=.6):
         
             # Starting Song
             pyautogui.keyDown('E')
@@ -71,20 +72,11 @@ def main():
             print("Starting Song...")
             time.sleep(0.05)
 
-
-        # Looking for the E
-        if pyautogui.locate("imgs/E.png", sctImgSkip, grayscale=True, confidence=.75):
-        
-            # Skipping timer
-            pyautogui.keyDown('E')
-            time.sleep(0.05)
-            pyautogui.keyUp('E')            
-            print("Skipping timer...")
-
+        '''
 
 
         # Looking for the A
-        if pyautogui.locate("imgs/A-cut.png", sctImgNote, grayscale=True, confidence=.65):
+        if pyautogui.locate("imgs/A-cut.png", sctImgNote, grayscale=True, confidence=.7):
 
             # Pressing Note A
             pyautogui.keyDown('A')
@@ -94,7 +86,7 @@ def main():
 
 
         # Looking for the S
-        if pyautogui.locate("imgs/S-cut.png", sctImgNote, grayscale=True, confidence=.65):
+        elif pyautogui.locate("imgs/S-cut.png", sctImgNote, grayscale=True, confidence=.7):
 
             # Pressing Note S
             pyautogui.keyDown('S')
@@ -104,7 +96,7 @@ def main():
 
 
         # Looking for the D
-        if pyautogui.locate("imgs/D-cut.png", sctImgNote, grayscale=True, confidence=.65):
+        elif pyautogui.locate("imgs/D-cut.png", sctImgNote, grayscale=True, confidence=.7):
 
             # Pressing Note D
             pyautogui.keyDown('D')
@@ -114,7 +106,7 @@ def main():
 
 
         # Looking for the W
-        if pyautogui.locate("C:/Users/italo/Desktop/music/imgs/W-cut.png", sctImgNote, grayscale=True, confidence=.65):
+        elif pyautogui.locate("imgs/W-cut.png", sctImgNote, grayscale=True, confidence=.7):
 
             # Pressing Note W
             pyautogui.keyDown('W')
@@ -124,7 +116,7 @@ def main():
 
 
         # Looking for the MouseClicks
-        if pyautogui.locate("imgs/Mouse-slim.png", sctImgNote, grayscale=True, confidence=.5):
+        elif pyautogui.locate("imgs/Mouse-slim.png", sctImgNote, grayscale=True, confidence=.7):
 
             # Pressing Note MouseClicks
             click()
@@ -133,21 +125,28 @@ def main():
 
 
         # Looking for the Space
-        if pyautogui.locate("imgs/Space-Blank.png", sctImgNote, grayscale=True, confidence=.65):
+        elif pyautogui.locate("imgs/Space-Blank.png", sctImgNote, grayscale=True, confidence=.7):
 
             #Pressing Space
             pyautogui.keyDown('space')
             pyautogui.keyUp('space')
             print("Space")
 
-
+        # Looking for the E
+        elif pyautogui.locate("imgs/E.png", sctImgSkip, grayscale=True, confidence=.75):
+        
+            # Skipping timer
+            pyautogui.keyDown('E')
+            time.sleep(0.05)
+            pyautogui.keyUp('E')            
+            print("Skipping timer...")
 
         # Stuff to check and make visuals work + garbage cleaner
         #cv2.imshow("visuals", sctImgNote)
         #if cv2.waitKey(1) and 0xFF == ord('q'):
     
             gc.collect()
-
+        time.sleep(0.05)
 gc.collect()
 
 # Runs the main function
