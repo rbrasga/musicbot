@@ -11,7 +11,7 @@ if you have a fix do whatever
 
 Known Features
 
-    Works out of the box when being ran FULL SCREEN at 1920x1080
+    Works out of the box when being ran FULL SCREEN at 1440p
 
 Prereqs
 
